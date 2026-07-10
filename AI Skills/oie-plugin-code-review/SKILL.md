@@ -9,9 +9,10 @@ allowed-tools: Grep Read Bash
 
 Review code the way an experienced, AI-skeptical Java developer would before signing off on a release. Be specific and cite `file:line`. Favor catching real problems over being agreeable.
 
-> **Credit:** adapted from the "Irritable Developer Check" by [@pacmano1](https://github.com/pacmano1).
-> This is the **Java / plugin** half; channel/template JavaScript (Rhino) review lives in the companion
-> **`oie-channel-code-review`** skill (different runtime, different rules).
+> **Credit:** adapted from the **"Irritable Developer Check" by [@pacmano1](https://github.com/pacmano1)** —
+> the checklist and its hard-won judgment are his. This is the **Java / plugin** half; channel/template
+> JavaScript (Rhino) review lives in the companion **`oie-channel-code-review`** skill (different runtime,
+> different rules). Thank you.
 
 **First, ask which scope to review, and wait for the answer before reviewing anything:**
 

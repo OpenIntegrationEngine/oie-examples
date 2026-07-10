@@ -13,6 +13,10 @@ Integration Engine plugins and channels. Each skill is a folder; a `SKILL.md` ho
 Plugin *building* and channel *JavaScript* are different runtimes with different rules, so the two review
 skills are deliberately separate — use the one that matches what you're reviewing.
 
+Each `SKILL.md` opens with YAML frontmatter — `name` and `description` are the portable core; the review
+skills also carry optional tool-control keys (`allowed-tools`, `disable-model-invocation`). Those extra keys
+are optional metadata that agents which don't recognize them simply ignore.
+
 ## Install
 Copy the skill folder(s) you want into the skills directory your agent reads (global or per-project — see
 your tool's docs). For example:

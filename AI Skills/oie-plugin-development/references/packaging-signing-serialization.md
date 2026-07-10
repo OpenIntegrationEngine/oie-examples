@@ -188,7 +188,7 @@ the Launcher to accept it.
 
 ### Self-signed dev signing (fast path)
 
-1. Generate a self-signed keystore — Mirth requires the proprietary **JKS** format:
+1. Generate a self-signed keystore — Mirth uses the legacy Java **JKS** keystore format:
    ```bash
    keytool -genkeypair -keyalg RSA -keysize 2048 -alias selfsigned \
      -keystore certificate/keystore.jks -storepass storepass -keypass storepass \
@@ -204,8 +204,10 @@ Two config gotchas for the self-signed path:
 - **Do not set a `<tsa>`** (timestamp authority) on a self-signed dev cert. It makes the *client* do slow,
   often-failing OCSP/timestamp lookups. Add a `<tsa>` back only for a real CA-signed release build.
 - Add `<keypass>${signing.storepass}</keypass>` if your key and store share a password.
-- Commit the dev keystore (it's a throwaway self-signed cert) so `-Psigning` works out of the box; it is
-  **not** a release key.
+- **Don't commit the keystore.** Even a throwaway self-signed keystore holds a private key — committing it is
+  a credential/supply-chain smell and tends to get copied forward. Generate it locally (or in CI) and
+  `.gitignore` it; document the one `keytool` command (above) so anyone can regenerate. If you must commit
+  something for reproducibility, commit only the **public certificate**, not the keystore.
 
 ### The signing POM
 

@@ -10,13 +10,14 @@ allowed-tools: Grep Read Bash
 Review channel and code-template JavaScript the way an experienced developer would before deploying it. Be
 specific and cite `file:line`. Favor catching real problems over being agreeable.
 
-> **Credit:** adapted from the "Irritable Developer Check" by [@pacmano1](https://github.com/pacmano1).
-> This is the **channel/JavaScript (Rhino)** half; Java/plugin/server review lives in the companion
-> **`oie-plugin-code-review`** skill (different runtime, different rules).
+> **Credit:** adapted from the **"Irritable Developer Check" by [@pacmano1](https://github.com/pacmano1)** —
+> the checklist and its hard-won judgment are his. This is the **channel/JavaScript (Rhino)** half;
+> Java/plugin/server review lives in the companion **`oie-plugin-code-review`** skill (different runtime,
+> different rules). Thank you.
 >
-> **Note for review:** the `const`/`let` rule below has been **changed** from the original ("`var` only,
-> never `const`/`let`") to target the *actual* Rhino bug while keeping modern block scoping. Reconcile with
-> pacmano1 before this ships.
+> The block-scoping rule below intentionally differs from the original "`var` only" guidance: it targets the
+> *actual* Rhino loop bug while keeping modern `const`/`let` everywhere they're safe (rationale is in the
+> rule itself).
 
 **First, ask which scope to review, and wait for the answer:** recent changes (git diff) vs. the full set of
 channel/template scripts. If it's not a git repo, ask for the paths (exported channel XML, code-template
@@ -46,18 +47,26 @@ These differ from Java and catch bugs the Java sections never will. Confirm exac
 the OIE version in use.
 
 - **Block scoping inside loops — the one real trap.** Default to `const`/`let` (modern best practice: no
-  hoisting surprises, no accidental reassignment). The *forced* exception: Rhino mis-compiles a `const`/`let`
-  **declared inside a loop body and reused across iterations** — it hoists the binding to function scope, so
-  every iteration silently shares one value, with no error thrown (canonical case: a `while` loop over HTTP
-  response headers returned six identical `Date` values). **Flag `const` declared inside a loop body; require
-  `let` there** so the per-iteration assignment takes effect. Do **not** flag `const`/`let` at function
-  scope, and do **not** rewrite working code to `var` — that discards block-scoping safety to dodge one bug.
-  (Some report the mis-alias in `if`/`switch` blocks too on certain builds — verify against your Rhino
-  version; when a binding declared inside any block is reused and behaves oddly, this is the first suspect.)
-- **No template literals, `async`/`await`, `Promise`, optional chaining `?.`, nullish `??`, spread, or
-  `for...of`** — Rhino's partial ES6. Flag these as runtime-breakers; use `+`/`.join()`, callbacks/retries,
-  a `$t(() => …)` try/catch helper, `||`, and indexed/`.forEach()` loops instead. (These are forced
-  deviations, not style — see the principle above.)
+  hoisting surprises, no accidental reassignment). The *forced* exception: Rhino does **not** create a fresh
+  per-iteration binding for a `const`/`let` declared **inside a loop body** — it hoists one binding to
+  function scope, shared across iterations. What that shared binding does depends on the keyword:
+  - **`const` is the real bug**: it can't be reassigned, so every iteration keeps the first value (canonical
+    case: a `while` over HTTP response headers pushing six identical `Date`s) — and some builds throw
+    "redeclaration of const" on the second pass. **Flag `const` declared-and-reused inside a loop body.**
+  - **`let` is reassigned each iteration**, so reading it *within the same iteration* is correct — **prefer
+    `let` there.** The one case where the shared binding still bites: a **closure created inside the loop**
+    that captures the variable (all closures then see the final value). For that, iterate with `.forEach()` —
+    its callback parameter is a genuine per-iteration scope.
+
+  Do **not** flag `const`/`let` at function scope, and do **not** rewrite working code to `var` — that
+  discards block-scoping safety to dodge one bug. (Some report the same mis-alias in `if`/`switch` blocks on
+  certain builds — verify against your Rhino version; a binding declared inside any block and reused is the
+  first suspect when values behave oddly.)
+- **Watch for the ES6 features Rhino handles poorly**: template literals, `async`/`await`, `Promise`,
+  optional chaining `?.`, nullish `??`, spread in parameter lists, and `for...of` are unreliable or missing
+  on the bundled Rhino — flag them and use `+`/`.join()`, callbacks/retries, plain `try/catch`, `||`, and
+  indexed/`.forEach()` loops instead. (Support is language-version dependent — OIE defaults Rhino to ES6, so
+  `let`/`const`/arrow functions *do* work; confirm borderline features against the server in use.)
 - **Use the channel `logger`, not `System.out`/`System.err`** — output goes through the provided `logger` at
   the right level, never `println`. And never log HL7 content, PHI, or credentials (see `[SECURITY]`).
 - **Unclosed database connections**: a connection from `DatabaseConnectionFactory` must be closed in a

@@ -62,4 +62,5 @@ staying compatible with TLS plugins → [`references/connector-plugins.md`](./re
   `connector-plugins.md` and the Administrator-Launcher signing section are **field notes** from building a
   connector — additions to, not from, the original guide.
 - This skill covers **building the plugin**. For JavaScript that runs *inside a channel* (transformers,
-  filters, code templates), that's a different context — see an OIE channel/template `AGENTS.md` instead.
+  filters, code templates), that's a different runtime (Rhino) with different rules — see the companion
+  **`oie-channel-code-review`** skill.
