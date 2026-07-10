@@ -90,22 +90,31 @@ A connector settings panel sits right next to the stock ones, so it has to match
 
 Unit tests can't prove socket behavior. Stand up the real thing:
 
-- **Docker OIE** (`openintegrationengine/engine`) with your built zip mounted at
-  `/opt/engine/custom-extensions/` — the entrypoint auto-installs any `.zip` there on boot.
+- **Docker OIE** — pin the tag (`openintegrationengine/engine:<version>`, **not** `:latest`, which floats to
+  the next release) — with your built zip mounted at `/opt/engine/custom-extensions/` (the entrypoint
+  auto-installs any `.zip` there on boot).
 - A **controllable sink** — a tiny zero-dependency listener you can command to ACK / NACK / hang / go down —
   as the test oracle.
 - A **REST driver** that logs in (`POST /api/users/_login`, header `X-Requested-With` required), deploys a
   channel, injects messages, and asserts against the sink.
 
-Traps that each cost real time:
-1. **`POST /channels/{id}/messages` binds `destinationMetaDataId` to an *empty set* when omitted → the
-   message routes to ZERO destinations** (it dead-ends at the source; your connector never runs). Pass
-   `?destinationMetaDataId=<id>`.
+**Use an exported, known-good channel as the fixture — do NOT hand-serialize channel XML and POST it.** This
+is the one that costs *days*: `POST /api/channels` **accepts a structurally-incomplete channel without
+normalizing or rejecting it**, deploys it "healthy", and it *partially works*. A channel serialized
+programmatically outside the engine (via `ObjectXMLSerializer`, no plugins on the classpath) uses base/default
+classes — transmission mode comes out as `FrameModeProperties` instead of the real
+`MLLPModeProperties`, connectors have no `<pluginProperties/>`, `queueBufferSize` is `0`. With a **RAW**
+datatype it works; with **HL7 v2.x** the destination sends the literal string **`undefined`** on the wire —
+no error anywhere. The Administrator normalizes all of this on save. So: **build the channel once in the
+Administrator, export it, strip the `<list>` wrapper and `<exportData>` block, and commit that XML as your
+fixture.** (The REST API is fine once the config is complete — create *and* message-inject both work; and
+you can freely edit *your own connector's* properties in the exported XML, e.g. the endpoint list.)
+
+Two path traps that still bite even with a good fixture:
+1. **`POST /channels/{id}/messages` binds `destinationMetaDataId` to an *empty set* when omitted → routes to
+   ZERO destinations** (it dead-ends at the source; your connector never runs). Pass `?destinationMetaDataId=<id>`.
 2. **Redeploying a stuck channel can leave it source-only.** Do a clean `_undeploy` → `_deploy` and wait for
    the **destination** child to report `STARTED`, not just the channel.
-3. A programmatically built channel NPEs on deploy (`DataTypeFactory … dataTypeProperties is null`) unless
-   **every connector's transformer has non-null inbound/outbound `DataTypeProperties`** (RAW or HL7V2). Set
-   them when generating channel fixtures. (RAW = byte passthrough, ideal for a pure-transport test.)
 
 ### Observability (operators will ask "where did it go?")
 

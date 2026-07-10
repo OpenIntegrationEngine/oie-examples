@@ -13,7 +13,9 @@ styling, live testing). See **[`connector-plugins.md`](./connector-plugins.md)**
   set the table's scroll **viewport** white too.
 - **`POST /channels/{id}/messages` with no `destinationMetaDataId` routes to *zero* destinations** — the
   message dead-ends at the source and your connector never runs.
-- **A programmatic channel NPEs on deploy** unless each transformer has non-null in/out `DataTypeProperties`.
+- **Don't hand-serialize channel XML for tests.** `POST /api/channels` accepts a structurally-incomplete
+  channel and it *partially* works (RAW passthrough is fine; HL7 v2.x sends the literal `undefined` on the
+  wire). Build the channel in the Administrator, **export** it, and use that as the fixture.
 
 ### Dependencies and Classpath
 
