@@ -20,8 +20,10 @@ reference for the task at hand rather than pulling in the whole guide.
 > [@pacmano1](https://github.com/pacmano1)** — the hard-won knowledge here is his. Thank you.
 
 ## First, the thing that surprises people
-Plugins build with **Maven** (root POM + module POMs), even though the **engine itself builds with Ant**.
-Don't mix them up: use the Maven workflow below for plugin work.
+Plugins build with **Maven** (root POM + module POMs), even though the **engine itself builds with Gradle**
+(it migrated off Ant in June 2026 — older guides still say Ant). Don't mix them up: use the Maven workflow below for plugin work. You never build
+the engine to build a plugin — its artifacts come from a Maven repo (see
+[`references/maven-poms.md`](./references/maven-poms.md)), so the engine's own build system is not your concern.
 
 ## Shape of a plugin
 A plugin is a multi-module Maven project that produces an installable `.zip`:
