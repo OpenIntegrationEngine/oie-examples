@@ -1,36 +1,22 @@
 # Example Channels, Code Templates, and more
-This is a repository of example channels, code templates, and other scripts you can import and use in Mirth Connect.
 
-#### Channels
- - Get Num Pages From Embedded PDF
- - Validate XSD Source Filter
- 
-#### Code Templates
- - Convert Date From Multiple Formats
- - Convert XML to HL7
- - Create and Insert Segment Templates
- - Encrypt PDF
- - Execute Runtime Command
- - Extract Text From PDF
- - Filter XMLLists
- - Fix HL7 Node Order
- - Get Num Pages In PDF
- - Get Segments After a Particular Segment
- - Join HL7 Sub-components
- - Overwrite Logger Categories
- - Rename HL7 Field
- - Replace in All Descendant XML Nodes
- - Route with Sources
- - Run on Startup
- - Strip Empty Nodes from XML
- - Thread-safe get or create from globalMap
- - Unescape `\Xdd..\` HL7 Sequences
+A collection of example channels, code templates, and scripts you can import and use in [Open Integration Engine](https://github.com/OpenIntegrationEngine).
 
-#### Scripts
- - EDI/X12 Batch Script
- 
-See also the public wiki: [https://github.com/nextgenhealthcare/connect/wiki/](https://github.com/nextgenhealthcare/connect/wiki/)
+## Layout
+
+- [`Channels`](Channels): example channels. Each channel has its own folder with the channel XML and a README.
+- [`Code Templates`](Code%20Templates): code templates. Each template has its own folder.
+- [`Scripts`](Scripts): standalone scripts, such as batch scripts.
+
+Each example folder has a README describing what it does and how to use it.
+
+## Contributing
+
+Add each new example in its own folder under the matching top-level directory, with a README.
+
+- Contributors must sign the [Eclipse Contributor Agreement](https://www.eclipse.org/legal/eca/) (ECA). You sign it once, online, with an [Eclipse account](https://accounts.eclipse.org/), and the email address on your commits must match the one on that account.
+- Every new file must include an `SPDX-FileCopyrightText` and `SPDX-License-Identifier` header naming the contributor and the license. Files that can't carry a header, such as READMEs, get an entry in [REUSE.toml](REUSE.toml) instead. Use `MPL-2.0` unless agreed otherwise.
 
 ## License
 
-Unless otherwise specified by a LICENSE file in a project subfolder, all channels, code templates, scripts, and other modules are Copyright © NextGen Healthcare and licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
+Contributions are copyright their respective authors. The license of each file is stated in its SPDX header or in [REUSE.toml](REUSE.toml). A `LICENSE` file in its folder is optional. Most content is licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).

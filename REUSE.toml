@@ -112,3 +112,9 @@ SPDX-License-Identifier = "MPL-2.0"
 path = "Code Templates/Run on Startup/README.md"
 SPDX-FileCopyrightText = "2019 Tony Germano"
 SPDX-License-Identifier = "MPL-2.0"
+
+# Root README, rewritten for Open Integration Engine.
+[[annotations]]
+path = "README.md"
+SPDX-FileCopyrightText = "2026 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"
