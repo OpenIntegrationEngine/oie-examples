@@ -91,3 +91,24 @@ SPDX-License-Identifier = "MPL-2.0"
 path = "Scripts/EDI X12 Batch Script/README.md"
 SPDX-FileCopyrightText = "NextGen Healthcare"
 SPDX-License-Identifier = "MPL-2.0"
+
+# Subfolders contributed by Tony Germano. Later annotations take precedence.
+[[annotations]]
+path = "Code Templates/Filter XMLLists/README.md"
+SPDX-FileCopyrightText = "2020 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Join HL7 Subcomponents/README.md"
+SPDX-FileCopyrightText = "2018 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Route with Sources/README.md"
+SPDX-FileCopyrightText = "2023, 2024 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Run on Startup/README.md"
+SPDX-FileCopyrightText = "2019 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"

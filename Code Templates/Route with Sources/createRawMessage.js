@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2023, 2024 Tony Germano
+// SPDX-License-Identifier: MPL-2.0
+
 /**
     Create a RawMessage with the specified content, sourceMap, and destinationSet. Information about the
     chain of source channel Ids and source message Ids will be included in the sourceMap of the new

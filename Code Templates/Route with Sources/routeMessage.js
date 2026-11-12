@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2023, 2024 Tony Germano
+// SPDX-License-Identifier: MPL-2.0
+
 /**
     Route a message to the specified channelName. Information about the chain of source channel Ids and
     source message Ids will be included in the sourceMap of the downstream message automatically in a

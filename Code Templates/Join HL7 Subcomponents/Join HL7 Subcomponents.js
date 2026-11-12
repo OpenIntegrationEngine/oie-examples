@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2018 Tony Germano
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Returns the string representation of each child element of <b>xml</b> joined by
 	<b>separator</b>. If <b>xml</b> contains no child elements, the string

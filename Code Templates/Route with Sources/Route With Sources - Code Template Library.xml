@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: 2023, 2024 Tony Germano
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplateLibrary version="3.4.0">
   <id>ca9c7efd-2329-4248-bb9a-0271554baeaf</id>
   <name>Route With Sources</name>

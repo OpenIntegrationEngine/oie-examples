@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2020 Tony Germano
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Improved XMLList filter over built-in e4x filters.
 
