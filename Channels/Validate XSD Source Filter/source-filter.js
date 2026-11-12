@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 importPackage(javax.xml);
 importPackage(javax.xml.transform.stream);
 importPackage(javax.xml.validation);

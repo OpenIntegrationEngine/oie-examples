@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>ffa5fa9b-e13e-48b1-96d5-b4f7ac08d497</id>
   <name>Strip Empty Nodes from XML</name>

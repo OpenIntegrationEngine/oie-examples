@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Returns an array of segments with the specified name that come after a given segment in the message.
 

@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>7294645e-df37-4536-b2ad-a0d08f4e98be</id>
   <name>Get Num Pages In PDF</name>

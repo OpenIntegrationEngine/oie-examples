@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Inserts a given segment after a particular segment.
 

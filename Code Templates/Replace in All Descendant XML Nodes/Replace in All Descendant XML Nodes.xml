@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>c4ef99be-6845-4167-8a07-1e6c40b52bb3</id>
   <name>Replace in All Descendant XML Nodes</name>

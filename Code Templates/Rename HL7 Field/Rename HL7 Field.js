@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	This function returns a copy of the given HL7 field, changing all segment names to the given name.
 

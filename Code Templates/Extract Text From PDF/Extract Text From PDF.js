@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Extracts and returns all text from a PDF. Uses the built-in iText library, version 2.1.7.
 

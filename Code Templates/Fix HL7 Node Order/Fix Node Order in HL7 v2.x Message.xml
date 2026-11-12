@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>23adc50e-ab2b-4c9f-ab4b-6b17dc31bab7</id>
   <name>Fix Node Order in HL7 v2.x Message</name>

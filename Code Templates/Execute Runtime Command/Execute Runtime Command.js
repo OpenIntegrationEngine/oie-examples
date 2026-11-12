@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Executes a command or array of command and arguments using a local OS shell. Returns an object
 	containing the exit value, output, and errors.

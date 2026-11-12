@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>e31ef05e-7cd5-43d2-a2db-b264ed98c003</id>
   <name>Convert Date From Multiple Formats</name>

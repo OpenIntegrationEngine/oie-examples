@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>d25ebb24-3802-4caa-a4fe-3b69501187a0</id>
   <name>Insert Segment Before Segment</name>

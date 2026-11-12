@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Replaces any \Xdd..\ HL7 escape sequences with the corresponding character(s).
 

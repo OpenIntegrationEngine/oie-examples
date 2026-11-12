@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Because out-of-order HL7 nodes can cause unexpected errors, this function will automatically fix
 	that node order, using the HL7 numeric dot notation.

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 var segDelim = '~';
 var elementDelim = '*';
 var subelementDelim = ':';

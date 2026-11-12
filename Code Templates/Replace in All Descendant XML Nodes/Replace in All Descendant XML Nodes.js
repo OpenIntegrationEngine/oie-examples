@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Recursively iterates through all descendant nodes of an E4X XML object and makes a string
 	replacement.

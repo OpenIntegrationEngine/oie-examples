@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>942f9161-6998-42e1-9528-83342f457ac5</id>
   <name>Encrypt PDF</name>

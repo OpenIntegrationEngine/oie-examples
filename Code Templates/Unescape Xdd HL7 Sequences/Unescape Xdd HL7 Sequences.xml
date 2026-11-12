@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>9d3f1dd9-d28e-42e5-89bd-8a3569b33b69</id>
   <name>Unescape \Xdd..\ HL7 Sequences</name>

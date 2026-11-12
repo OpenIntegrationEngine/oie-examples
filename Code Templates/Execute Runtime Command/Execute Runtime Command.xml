@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>28e29e59-d093-41cf-8c2d-4ad4587f9e20</id>
   <name>Execute Runtime Command</name>

@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>a9e61c41-5b0c-47da-82c9-0601ad5a3baa</id>
   <name>Overwrite Logger Categories</name>

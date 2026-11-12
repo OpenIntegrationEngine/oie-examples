@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>dcd2ce64-4c3c-4e53-9f71-dbf296004fe3</id>
   <name>Extract Text From PDF</name>

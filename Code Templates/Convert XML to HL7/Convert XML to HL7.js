@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Deserializes an E4X XML node into HL7 v2.x. The last four parameters are optional and default to the
 	standard encoding characters.

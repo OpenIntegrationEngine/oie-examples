@@ -1,0 +1,93 @@
+version = 1
+
+# Files originally created by NextGen Healthcare that do not carry inline headers.
+
+[[annotations]]
+path = "Channels/Get Num Pages From Embedded PDF/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Channels/Validate XSD Source Filter/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Convert Date From Multiple Formats/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Convert XML to HL7/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Create and Insert Segment Templates/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Encrypt PDF/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Execute Runtime Command/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Extract Text From PDF/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Fix HL7 Node Order/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Get Num Pages In PDF/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Get Segments After a Particular Segment/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Overwrite Logger Categories/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Rename HL7 Field/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Replace in All Descendant XML Nodes/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Strip Empty Nodes from XML/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Code Templates/Unescape Xdd HL7 Sequences/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "Scripts/EDI X12 Batch Script/README.md"
+SPDX-FileCopyrightText = "NextGen Healthcare"
+SPDX-License-Identifier = "MPL-2.0"

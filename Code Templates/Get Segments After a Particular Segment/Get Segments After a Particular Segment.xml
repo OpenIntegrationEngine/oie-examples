@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: NextGen Healthcare
+  SPDX-License-Identifier: MPL-2.0
+-->
 <codeTemplate version="3.6.0">
   <id>270003aa-9350-45a7-9397-58679320cb9d</id>
   <name>Get Segments After a Particular Segment</name>

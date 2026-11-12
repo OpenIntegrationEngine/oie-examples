@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Parses a date (String, Date, DateTime, or Number) into a string using an array of possible input
 	patterns and the specified output pattern.

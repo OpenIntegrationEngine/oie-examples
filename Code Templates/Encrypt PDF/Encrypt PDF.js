@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Encrypts a PDF with a password. Either a Base64 string or by array can be passed in, and the output
 	can be written to a file or returned as a Base64 string.

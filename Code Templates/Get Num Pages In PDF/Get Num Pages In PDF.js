@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: NextGen Healthcare
+// SPDX-License-Identifier: MPL-2.0
+
 /**
 	Loads the raw PDF byte array into a PDFBox PDDocument object, then returns the number of pages in
 	the PDF.
