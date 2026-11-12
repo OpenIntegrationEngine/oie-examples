@@ -118,3 +118,8 @@ SPDX-License-Identifier = "MPL-2.0"
 path = "README.md"
 SPDX-FileCopyrightText = "2026 Tony Germano"
 SPDX-License-Identifier = "MPL-2.0"
+
+[[annotations]]
+path = "renovate.json"
+SPDX-FileCopyrightText = "2026 Tony Germano"
+SPDX-License-Identifier = "MPL-2.0"
